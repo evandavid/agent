@@ -23,21 +23,43 @@ const reducer = combineReducers(reducers);
 const store = createStoreWithMiddleware(reducer);
 
 BackAndroid.addEventListener('hardwareBackPress', () => {
-
-  console.log('==== ROUTES ====');
-  console.log(_navigator.getCurrentRoutes())
-
-  if (_navigator.getCurrentRoutes().length === 1 && _navigator.getCurrentRoutes()[0].id === 'home' ) {
-    return false
-    console.log('==== ROUTES EXIT ====');
-    console.log(_navigator.getCurrentRoutes())
+  if (_navigator.getCurrentRoutes().length === 1 && _navigator.getCurrentRoutes()[0].id === 'login' ) {
+    Alert.alert( 'Confirm exit', 'Are you sure you want to exit?',
+      [ {text: 'Cancel', onPress: () => { console.log('test') }},
+        {text: 'OK', onPress: () => { BackAndroid.exitApp()}} ]
+    );
   } else {
-    _navigator.pop();
+    setTimeout(() => {_navigator.pop();}, 100);
     return true;
   }
+  return true;
 });
 
 export default class agent extends Component {
+  codePushStatusDidChange(status) {
+      switch(status) {
+          case codePush.SyncStatus.CHECKING_FOR_UPDATE:
+              console.log("Checking for updates.");
+              break;
+          case codePush.SyncStatus.DOWNLOADING_PACKAGE:
+              console.log("Downloading package.");
+              break;
+          case codePush.SyncStatus.INSTALLING_UPDATE:
+              console.log("Installing update.");
+              break;
+          case codePush.SyncStatus.UP_TO_DATE:
+              console.log("Up-to-date.");
+              break;
+          case codePush.SyncStatus.UPDATE_INSTALLED:
+              console.log("Update installed.");
+              break;
+      }
+  }
+
+  codePushDownloadDidProgress(progress) {
+      console.log(progress.receivedBytes + " of " + progress.totalBytes + " received.");
+  }
+
   constructor (props) {
     super(props);
 
@@ -133,6 +155,8 @@ export default class agent extends Component {
   }
 
   componentDidMount() {
+    codePush.sync({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE });
+
     var app = store.getState().app,
         $this = this,
         schema = new Schema(),
@@ -192,4 +216,4 @@ export default class agent extends Component {
   }
 }
 
-agent = codePush(agent);
+agent = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(agent);
