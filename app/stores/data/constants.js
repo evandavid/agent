@@ -1,0 +1,12 @@
+export const INITIALIZED = 'modoit.agent.data.INITIALIZED';
+export const UPDATE_CLIENT_LIST = 'modoit.agent.data.UPDATE_CLIENT_LIST';
+export const ADD_CLIENT_LIST = 'modoit.agent.data.ADD_CLIENT_LIST';
+export const UPDATE_CLIENT_TRANSACTION = 'modoit.agent.data.UPDATE_CLIENT_TRANSACTION';
+export const UPDATE_CLIENT_PROFILE = 'modoit.agent.data.UPDATE_CLIENT_PROFILE';
+export const UPDATE_CLIENT_WALLET = 'modoit.agent.data.UPDATE_CLIENT_WALLET';
+export const UPDATE_CLIENT_PRODUCT = 'modoit.agent.data.UPDATE_CLIENT_PRODUCT';
+export const CLEAR_CLIENT_LIST = 'modoit.agent.data.CLEAR_CLIENT_LIST';
+export const UPDATE_TRANSACTION = 'modoit.agent.data.UPDATE_TRANSACTION';
+export const UPDATE_WALLET = 'modoit.agent.data.UPDATE_WALLET';
+export const REMOVE_TRANSACTION_TIME = 'modoit.agent.data.REMOVE_TRANSACTION_TIME';
+export const REMOVE_WALLET_TIME = 'modoit.agent.data.REMOVE_WALLET_TIME';

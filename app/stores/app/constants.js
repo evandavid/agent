@@ -1,0 +1,11 @@
+export const INITIALIZED     = 'modoit.agent.INITIALIZED';
+export const LOGGED_IN       = 'modoit.agent.LOGGED_IN';
+export const LOGGED_OUT      = 'modoit.agent.LOGGED_OUT';
+export const CHANGE_ORI      = 'modoit.agent.CHANGE_ORI';
+export const CHANGE_TOKEN    = 'modoit.agent.CHANGE_TOKEN';
+export const UPDATE_BALAN    = 'modoit.agent.UPDATE_BALAN';
+export const UPDATE_CART     = 'modoit.agent.UPDATE_CART';
+export const UPDATE_PRODUCTS = 'modoit.agent.UPDATE_PRODUCTS';
+export const UPDATE_URL      = 'modoit.agent.UPDATE_BACKEND_URL';
+export const CHANGE_USER     = 'modoit.agent.CHANGE_USER';
+export const CHANGE_CLIENT   = 'modoit.agent.CHANGE_CLIENT';
