@@ -41,6 +41,7 @@
 		F0F0A3811E864A84964E4EAE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FF118A75CDB4479DA6FD2463 /* libz.tbd */; };
 		F403BB24155544CC8634F0C2 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7807C7E6E9E3440D86D40468 /* Zocial.ttf */; };
 		0814805C2DE140AB9015C0D4 /* libRNCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D9ED8213664B5EAAE4FF4D /* libRNCrashes.a */; };
+		1A28B77DF9BB43CFAB93D4E9 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 240AFA46626E4D7CAF9A7C3C /* libCodePush.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +276,8 @@
 		FF118A75CDB4479DA6FD2463 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5C4003A98AE1441BBCEF932F /* RNCrashes.xcodeproj */ = {isa = PBXFileReference; name = "RNCrashes.xcodeproj"; path = "../node_modules/mobile-center-crashes/ios/RNCrashes.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		65D9ED8213664B5EAAE4FF4D /* libRNCrashes.a */ = {isa = PBXFileReference; name = "libRNCrashes.a"; path = "libRNCrashes.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C0CC306EABA44658AB0CCE89 /* CodePush.xcodeproj */ = {isa = PBXFileReference; name = "CodePush.xcodeproj"; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		240AFA46626E4D7CAF9A7C3C /* libCodePush.a */ = {isa = PBXFileReference; name = "libCodePush.a"; path = "libCodePush.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +311,7 @@
 				9B704D8C9795430382503D55 /* libRNAnalytics.a in Frameworks */,
 				57586A87B5F6EBFFE1391503 /* libPods-agent.a in Frameworks */,
 				0814805C2DE140AB9015C0D4 /* libRNCrashes.a in Frameworks */,
+				1A28B77DF9BB43CFAB93D4E9 /* libCodePush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +480,7 @@
 				557B6348A3CA4AAFBB1A3189 /* RealmReact.xcodeproj */,
 				54F155432E9E465A9E58E8A7 /* RNAnalytics.xcodeproj */,
 				5C4003A98AE1441BBCEF932F /* RNCrashes.xcodeproj */,
+				C0CC306EABA44658AB0CCE89 /* CodePush.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -982,6 +987,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/agent.app/agent";
@@ -998,6 +1004,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

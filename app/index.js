@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import codePush from 'react-native-code-push';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
@@ -190,3 +191,5 @@ export default class agent extends Component {
     return registerScreens(route, navigator, store, { ready: this.state.ready });
   }
 }
+
+agent = codePush(agent);
